@@ -1,15 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-
-import HomePage from '@/views/HomePage.vue'
+import HomePage from './views/HomePage.vue'
+import QuestionPage from './views/QuestionPage.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: HomePage },
-  { path: '/other', name: 'Other', component: () => import('@/views/OtherPage.vue') },
+  { path: '/question/category/:id', name: 'Question', component: QuestionPage },
 ]
 
-const router = createRouter({
+export default createRouter({
   history: createWebHistory(),
   routes,
 })
-
-export default router
