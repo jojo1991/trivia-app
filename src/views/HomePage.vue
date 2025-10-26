@@ -3,6 +3,8 @@ import { onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
 import BaseTitle from '../components/BaseTitle.vue'
 import useApi from '../composables/useApi'
+import MainScore from '../components/MainScore.vue'
+
 
 const { categories, getCategories } = useApi()
 
@@ -14,7 +16,7 @@ onMounted(async () => {
 
 <template>
   <section class="py-10">
-    <BaseTitle>Trivia Application</BaseTitle>
+    <BaseTitle>Trivia Application - <MainScore /></BaseTitle>
   </section>
 
   <section class="py-4">
